@@ -1,0 +1,21 @@
+[package]
+name = "interactive-xdg-mime-settings"
+version = "0.1.0"
+authors = ["Alex Rawson"]
+edition = "2018"
+description = "Quickly set the default XDG MIME types for your system"
+repository = "https://github.com/zombiepigdragon/interactive-xdg-mime-settings"
+license = "MIT"
+keywords = ["xdg", "settings", "mime"]
+categories = ["command-line-utilities", "config"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ctrlc = "3.1.7"
+dialoguer = "0.7.1"
+dirs = "3.0.1"
+log = "0.4.11"
+pretty_env_logger = "0.4.0"
+rust-ini = "0.16.0"
+walkdir = "2.3.1"
