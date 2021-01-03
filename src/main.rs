@@ -53,7 +53,7 @@ fn process_desktop_entries(files: impl Iterator<Item = DirEntry>) -> HashMap<Str
                 debug!("xdg-mime default '{}' '{}'", &filename, &mime);
                 associations
                     .entry(mime.to_owned())
-                    .or_insert(Vec::new())
+                    .or_insert_with(Vec::new)
                     .push(filename.clone());
             }
         }
@@ -122,7 +122,7 @@ fn do_association(mimetype: &str, programs: &[String]) {
 }
 
 fn main() {
-    if let Err(_) = std::env::var("RUST_LOG") {
+    if std::env::var("RUST_LOG").is_err() {
         std::env::set_var("RUST_LOG", "info");
     }
     pretty_env_logger::init();
