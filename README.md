@@ -1,4 +1,5 @@
 # interactive-xdg-mime-settings
+![Continuous integration](https://github.com/zombiepigdragon/interactive-xdg-mime-settings/workflows/Continuous%20integration/badge.svg)
 
 This is a tool to quickly set [XDG MIME](https://wiki.archlinux.org/index.php/XDG_MIME_Applications) associations
 interactively. It should be noted that there are *many* reasons why you probably don't want to use this: See [Problems](#Problems)
